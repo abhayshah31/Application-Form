@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Application Portal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <div class="shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <div class="form-header animate__animated animate__fadeInDown">
+            <h1>Join Our Team</h1>
+            <p>Take the first step towards your dream career</p>
+        </div>
+
+        <div class="form-container animate__animated animate__fadeInUp">
+            <div class="form-nav">
+                <div class="nav-item active" data-section="personal">Personal Info</div>
+                <div class="nav-item" data-section="professional">Professional</div>
+                <div class="nav-item" data-section="documents">Documents</div>
+            </div>
+
+            <form id="applicationForm">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 33%"></div>
+                </div>
+
+                <div class="form-section active" id="personal">
+                    <h3 class="form-section-title">Personal Information</h3>
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label class="input-label required-field">Full Name</label>
+                            <input type="text" class="form-input" name="fullName" required>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label required-field">Email</label>
+                            <input type="email" class="form-input" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label required-field">Phone</label>
+                            <input type="tel" class="form-input" name="phone" required>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label required-field">Date of Birth</label>
+                            <input type="date" class="form-input" name="dob" required>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">LinkedIn Profile</label>
+                            <input type="url" class="form-input" name="linkedin" placeholder="https://linkedin.com/in/your-profile">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Portfolio Website</label>
+                            <input type="url" class="form-input" name="portfolio" placeholder="https://your-portfolio.com">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label required-field">Location</label>
+                            <input type="text" class="form-input" name="location" required placeholder="City, Country">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label required-field">Work Authorization</label>
+                            <select class="form-input" name="workAuth" required>
+                                <option value="">Select Status</option>
+                                <option value="citizen">Citizen</option>
+                                <option value="permanent-resident">Permanent Resident</option>
+                                <option value="work-visa">Work Visa</option>
+                                <option value="student-visa">Student Visa</option>
+                                <option value="need-sponsorship">Need Sponsorship</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section" id="professional">
+                    <h3 class="form-section-title">Professional Information</h3>
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label class="input-label">Current Position</label>
+                            <input type="text" class="form-input" name="currentPosition">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label required-field">Years of Experience</label>
+                            <input type="number" class="form-input" name="experience" min="0" required>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label required-field">Expected Salary</label>
+                            <input type="number" class="form-input" name="salary" required>
+                            <div class="input-hint">Annual salary in USD</div>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label required-field">Position Applied For</label>
+                            <select class="form-input" name="position" required>
+                                <option value="">Select Position</option>
+                                <option value="frontend-developer">Frontend Developer</option>
+                                <option value="backend-developer">Backend Developer</option>
+                                <option value="fullstack-developer">Full Stack Developer</option>
+                                <option value="ui-designer">UI Designer</option>
+                                <option value="ux-designer">UX Designer</option>
+                                <option value="product-manager">Product Manager</option>
+                                <option value="project-manager">Project Manager</option>
+                                <option value="data-analyst">Data Analyst</option>
+                                <option value="devops-engineer">DevOps Engineer</option>
+                            </select>
+                        </div>
+                        <div class="input-group" style="grid-column: 1 / -1;">
+                            <label class="input-label required-field">Skills</label>
+                            <input type="text" class="form-input" name="skills"
+                            required placeholder="e.g., JavaScript, Python, Design">
+                            <div class="input-hint">Separate skills with commas</div>
+                        </div>
+                        <div class="input-group" style="grid-column: 1 / -1;">
+                            <label class="input-label">Certifications</label>
+                            <input type="text" class="form-input" name="certifications" placeholder="e.g., AWS Certified, PMP, CISSP">
+                            <div class="input-hint">Separate certifications with commas</div>
+                        </div>
+                        <div class="input-group" style="grid-column: 1 / -1;">
+                            <label class="input-label required-field">Notice Period</label>
+                            <select class="form-input" name="noticePeriod" required>
+                                <option value="">Select Notice Period</option>
+                                <option value="immediate">Immediate</option>
+                                <option value="2-weeks">2 weeks</option>
+                                <option value="1-month">1 month</option>
+                                <option value="2-months">2 months</option>
+                                <option value="3-months">3 months</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section" id="documents">
+                    <h3 class="form-section-title">Supporting Documents</h3>
+                    <div class="form-grid">
+                        <div class="input-group" style="grid-column: 1 / -1;">
+                            <div class="file-upload" id="resumeUpload">
+                                <h3>Upload Resume <span style="color: #ef4444;">*</span></h3>
+                                <p>Drag & drop your file here or click to browse</p>
+                                <div class="input-hint">Accepted formats: PDF, DOC, DOCX (Max 5MB)</div>
+                                <input type="file" name="resume" required hidden accept=".pdf,.doc,.docx">
+                            </div>
+                        </div>
+                        <div class="input-group" style="grid-column: 1 / -1;">
+                            <label class="input-label required-field">Cover Letter</label>
+                            <textarea class="form-input" name="coverLetter" rows="4" required></textarea>
+                            <div class="input-hint">Explain why you're the perfect fit for this role</div>
+                        </div>
+                        <div class="input-group" style="grid-column: 1 / -1;">
+                            <label class="input-label">Additional Information</label>
+                            <textarea class="form-input" name="additionalInfo" rows="3" placeholder="Any other information you'd like to share"></textarea>
+                        </div>
+                        <div class="input-group" style="grid-column: 1 / -1;">
+                            <label class="input-label required-field">Referral Source</label>
+                            <select class="form-input" name="referralSource" required>
+                                <option value="">How did you hear about us?</option>
+                                <option value="linkedin">LinkedIn</option>
+                                <option value="employee">Employee Referral</option>
+                                <option value="jobboard">Job Board</option>
+                                <option value="company-website">Company Website</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal" id="successModal">
+        <h2>Application Submitted Successfully! 🎉</h2>
+        <p>Thank you for applying. We'll review your application and get back to you soon.</p>
+        <button class="submit-btn" onclick="closeModal()">Close</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
